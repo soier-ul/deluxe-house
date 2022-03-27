@@ -1,0 +1,1052 @@
+.hero {
+  background-repeat: no-repeat;
+  background-size: 85% 100%;
+  background-position: top right;
+  position: relative;
+  height: calc(100vh - 145px);
+
+  @include max-w($md) {
+    height: calc(100vh - 82px);
+  }
+
+  @include max-w($sm) {
+    background-size: cover;
+    background-position: center;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url(../images/logo-big.jpg);
+    width: 140px;
+    height: 140px;
+    top: -5px;
+    left: 12%;
+    border-radius: 50%;
+
+    @include max-w($md) {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-image: url(../images/decor/design.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 400px;
+    height: 170px;
+    right: 0;
+    bottom: -30px;
+
+    @include max-w($lg) {
+      width: 235px;
+      height: 100px;
+      bottom: 15px;
+    }
+  }
+
+  &__inner {
+    position: relative;
+    height: calc(100vh - 155px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include max-w($sm) {
+      height: calc(100vh - 82px);
+    }
+  }
+
+  &__item {
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+  }
+
+  &__title {
+    font-family: 'Forum', cursive;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    max-width: 750px;
+    margin-bottom: 20px;
+    letter-spacing: 0.03em;
+
+    @include max-w($md) {
+      font-size: 42px;
+      margin-bottom: 10px;
+      max-width: 510px;
+    }
+
+    @include max-w($sm) {
+      font-size: 32px;
+    }
+
+    &--yellow {
+      color: $yellow-100;
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+    display: block;
+    max-width: 510px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 45px;
+
+    @include max-w($md) {
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+
+    @include max-w($sm) {
+      font-size: 14px;
+    }
+  }
+
+  &__btn {
+    padding: 24px 50px;
+    background-color: #fff;
+    color: #000;
+    line-height: 1.2;
+    border-radius: 50px;
+    transition: background-color 0.3s ease-out, box-shadow 0.3s;
+    outline: transparent;
+
+    @include max-w($md) {
+      padding: 18px 40px;
+    }
+
+    @include max-w($sm) {
+      font-size: 15px;
+      padding: 16px 30px;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px $yellow-100;
+    }
+
+    &:hover {
+      background-color: $yellow-100;
+    }
+
+    &:active {
+      box-shadow: inset 0 4px 4px rgba(#000, 0.25);
+    }
+  }
+
+  &__aside {
+    position: absolute;
+    left: 8%;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include max-w($lg) {
+      left: 6%;
+    }
+
+    @include max-w($sm) {
+      display: none;
+    }
+  }
+
+
+}
+
+.top-products {
+  padding: 80px 0 50px;
+
+  @include max-w($md) {
+    padding: 30px 0 40px;
+  }
+
+  &__title {
+    display: block;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $yellow-100;
+    margin-bottom: 35px;
+
+    &::before {
+      content: none;
+    }
+
+    @include max-w($sm) {
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    grid-row-gap: 35px;
+    justify-items: center;
+    margin-bottom: 80px;
+    position: relative;
+
+    @include max-w($lg) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url(../images/decor/interier.png);
+      background-repeat: no-repeat;
+      width: 355px;
+      height: 115px;
+      left: -300px;
+      bottom: -55px;
+
+      @include max-w($lg) {
+        left: -90px;
+        bottom: -100px;
+      }
+
+      @include max-w($md) {
+        display: none;
+      }
+    }
+  }
+
+  &__item {
+    width: auto;
+
+    @include max-w($sm) {
+      max-width: 650px;
+      width: 100%;
+      border-bottom: 1px solid $black-200;
+      border-radius: 5px;
+    }
+  }
+
+  &__links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @include max-w($xs) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.about {
+  padding: 50px 0;
+  overflow: hidden;
+
+  @include max-w($md) {
+    padding: 30px 0;
+  }
+
+  &__title {
+    display: block;
+    margin: 0 auto;
+    max-width: 605px;
+    color: #fff;
+    margin-bottom: 65px;
+
+    &::before {
+      content: none;
+    }
+
+    &--yellow {
+      color: $yellow-100;
+    }
+  }
+
+  &__inner {
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 46%;
+    min-height: 648px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 80px;
+    position: relative;
+
+    @include max-w($lg) {
+      background-size: 0;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: $yellow-100;
+      top: -35px;
+      left: 0;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url(../images/decor/about.png);
+      background-repeat: no-repeat;
+      width: 255px;
+      height: 65px;
+      right: -140px;
+      top: -140px;
+
+      @include max-w($xl) {
+        display: none;
+      }
+    }
+
+    &--services {
+
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  &__info {
+    max-width: 580px;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: center;
+
+    @include max-w($xs) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.advantages {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0;
+    z-index: -1;
+  }
+
+  &::after {
+    top: 0;
+    right: 0;
+    border-top: 1850px solid $black;
+    border-right: 10000px solid transparent;
+  }
+
+  &::before {
+    bottom: 0;
+    left: 0;
+    border: 0 solid transparent;
+    border-right-width: 0;
+    border-left-width: 7600px;
+    border-bottom: 1100px solid $black;
+  }
+
+  &__wrapper {
+    padding: 220px 0 320px;
+    position: relative;
+
+    @include max-w($lg) {
+      padding: 130px 0 190px;
+    }
+
+    @include max-w($md) {
+      padding: 80px 0 120px;
+    }
+
+    @include max-w($sm) {
+      padding: 45px 0;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba($yellow-100, 0.85);
+      z-index: -2;
+    }
+  }
+
+  &__top {
+    color: #000;
+    margin-bottom: 250px;
+    position: relative;
+    z-index: 5;
+
+    @include max-w($lg) {
+      margin-bottom: 60px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include max-w($sm) {
+      margin-bottom: 30px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url(../images/advantages/book-decor.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 1640px;
+      height: 1070px;
+      left: -35%;
+      transform: translateX(-35%);
+      top: -150px;
+      z-index: -1;
+
+      @include max-w($lg) {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    color: $black;
+    max-width: 510px;
+    text-align: left;
+    margin-left: auto;
+    font-weight: 400;
+    margin-bottom: 150px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 101%;
+      height: 125px;
+      background-color: $yellow-100;
+      top: -10px;
+      left: -5px;
+      border-radius: 20px 0 10px 0;
+      z-index: -1;
+    }
+
+    @include max-w($lg) {
+      display: inline-block;
+      max-width: 100%;
+      margin: 0 auto;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__bigtitle {
+    font-size: 34px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0;
+
+    @include max-w($sm) {
+      font-size: 28px;
+    }
+  }
+
+  &__text {
+    max-width: 510px;
+    margin-left: auto;
+    color: $black-200;
+
+    @include max-w($lg) {
+      margin: 0 auto;
+      max-width: 100%;
+    }
+  }
+}
+
+.collection {
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+
+  @include max-w($lg) {
+    padding: 50px 0;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+
+    @include max-w($xs) {
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 46%;
+    min-height: 695px;
+    margin-bottom: 180px;
+    position: relative;
+
+    @include max-w($lg) {
+      background-size: 45%;
+      min-height: 500px;
+      margin-bottom: 150px;
+    }
+
+    @include max-w($sm) {
+      background-size: 50%;
+      margin-bottom: 100px;
+      background-size: 0;
+      min-height: 0;
+      margin-bottom: 45px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url(../images/decor/plan-floor.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: -2;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--service {
+      justify-content: flex-start;
+      background-position: right;
+
+      &::before {
+        width: 695px;
+        height: 540px;
+        top: -300px;
+        right: -300px;
+      }
+    }
+
+    &--skill {
+
+      &::before {
+        width: 1000px;
+        height: 740px;
+        transform: rotate(90deg);
+        left: -700px;
+        top: -100px;
+      }
+    }
+
+    &--pro {
+      justify-content: flex-start;
+      background-position: right;
+
+      &::before {
+        width: 800px;
+        height: 700px;
+        transform: rotate(-60deg);
+        bottom: -150px;
+        right: -550px;
+      }
+    }
+
+    @include max-w($xs) {
+      justify-content: center;
+    }
+  }
+
+  &__info {
+    max-width: 510px;
+
+    @include max-w($lg) {
+      max-width: 460px;
+    }
+
+    @include max-w($sm) {
+      max-width: 340px;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 110%;
+        height: 110%;
+        top: -20px;
+        left: -10px;
+        background-color: $black-200;
+        z-index: -1;
+        border-radius: 12px;
+      }
+    }
+
+    @include max-w($xs) {
+
+      &::before {
+        width: 104%;
+        left: -5px;
+      }
+    }
+  }
+
+  &__subtitle {
+    display: block;
+    color: #6e6e6e;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 10px;
+
+    @include max-w($sm) {
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__title {
+    text-align: left;
+    width: 300px;
+
+    &::before {
+      content: none;
+    }
+
+    @include max-w($sm) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+    color: $silver-200;
+    margin-bottom: 0;
+
+    @include max-w($sm) {
+      font-size: 14px;
+    }
+  }
+}
+
+.studio-info {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0;
+    z-index: -2;
+  }
+
+  &::after {
+    top: 0;
+    right: 0;
+    border-top: 1850px solid $black;
+    border-right: 10000px solid transparent;
+  }
+
+  &::before {
+    bottom: 0;
+    left: 0;
+    border: 0 solid transparent;
+    border-right-width: 0;
+    border-left-width: 7600px;
+    border-bottom: 1100px solid $black;
+    z-index: -1;
+  }
+
+  &__wrapper {
+    padding: 280px 0 310px;
+    color: $black;
+
+    @include max-w($lg) {
+      padding: 120px 0;
+    }
+
+    @include max-w($sm) {
+      padding: 80px 0 50px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba($yellow-100, 0.85);
+      z-index: -2;
+    }
+  }
+
+  &__title {
+    margin-left: auto;
+    max-width: 610px;
+    text-align: left;
+    color: $black;
+    margin-bottom: 130px;
+    position: relative;
+
+    @include max-w($lg) {
+      margin-bottom: 60px;
+    }
+
+    @include max-w($sm) {
+      margin-bottom: 30px;
+    }
+
+    &::before {
+      background-color: $yellow-100;
+    }
+  }
+
+  &__bigtitle {
+    font-size: 34px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0;
+
+    @include max-w($sm) {
+      font-size: 28px;
+    }
+  }
+
+  &__list {
+    column-count: 3;
+
+    @include max-w($md) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    max-width: 370px;
+    width: 100%;
+    margin-bottom: 50px;
+    break-inside: avoid-column;
+
+    @include max-w($md) {
+      max-width: 100%;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__item-title {
+    line-height: 1.5;
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: 500;
+
+    @include max-w($md) {
+      margin-bottom: 10px;
+    }
+
+    @include max-w($sm) {
+      font-size: 18px;
+    }
+  }
+
+  &__text {
+    color: $black-200;
+
+    @include max-w($sm) {
+      font-size: 14px;
+    }
+  }
+}
+
+.services {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 10;
+  padding-top: 30px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba($black, 0.9);
+    z-index: -1;
+  }
+
+  &__title {
+    max-width: 590px;
+    text-align: left;
+    margin-left: auto;
+    color: #fff;
+    margin-bottom: 150px;
+
+    @include max-w($lg) {
+      margin-bottom: 80px;
+    }
+
+    @include max-w($sm) {
+      font-size: 26px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__bigtitle {
+    text-transform: uppercase;
+    color: $yellow-100;
+    font-size: 40px;
+
+    @include max-w($sm) {
+      font-size: 28px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include max-w($md) {
+      justify-content: center;
+    }
+
+    @include max-w($sm) {
+      text-align: center;
+    }
+  }
+
+  &__item {
+    width: 310px;
+    padding-top: 125px;
+    position: relative;
+    margin-bottom: 80px;
+
+    @include max-w($md) {
+      padding-top: 95px;
+      margin: 20px 20px;
+      width: calc(50% - 40px);
+    }
+
+    @include max-w($sm) {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 40px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      width: 130px;
+      height: 94px;
+      top: 0;
+      left: 0;
+
+      @include max-w($md) {
+        height: 74px;
+      }
+
+      @include max-w($sm) {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    &--tz::before {
+      background-image: url(../images/services/1.png);
+    }
+
+    &--visual::before {
+      background-image: url(../images/services/2.png);
+    }
+
+    &--drawling::before {
+      background-image: url(../images/services/3.png);
+    }
+
+    &--control::before {
+      background-image: url(../images/services/4.png);
+    }
+
+    &--material::before {
+      background-image: url(../images/services/5.png);
+    }
+
+    &--complect::before {
+      background-image: url(../images/services/6.png);
+    }
+  }
+
+  &__item-title {
+    font-weight: 700;
+    line-height: 1.2;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+    @include max-w($md) {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    color: $silver-200;
+  }
+}
+
+.partners {
+  padding: 50px 0;
+
+  @include max-w($md) {
+    padding: 50px 0 10px;
+  }
+
+  &__title {
+    max-width: 525px;
+    text-align: left;
+    margin-left: auto;
+    color: #fff;
+    margin-bottom: 120px;
+
+    @include max-w($md) {
+      margin-bottom: 60px;
+    }
+
+    @include max-w($sm) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__bigtitle {
+    font-size: 40px;
+    text-transform: uppercase;
+    color: $yellow-100;
+
+    @include max-w($sm) {
+      font-size: 34px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url(../images/decor/partner.png);
+      background-repeat: no-repeat;
+      width: 485px;
+      height: 65px;
+      top: -135px;
+      left: -160px;
+
+      @include max-w($xl) {
+        left: 50px;
+        top: -90px;
+      }
+
+      @include max-w($md) {
+        width: 320px;
+        height: 50px;
+        background-size: contain;
+        top: -50px;
+      }
+
+      @include max-w($sm) {
+        display: none;
+      }
+    }
+  }
+
+  &__item {
+    width: 160px;
+    height: 100px;
+    border-radius: 5px;
+    margin: 30px;
+
+    @include max-w($sm) {
+      width: 120px;
+      height: 70px;
+      margin: 15px 30px;
+    }
+
+    @include max-w($xs) {
+      margin: 10px 20px;
+      width: 100px;
+    }
+  }
+
+  &__link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    outline: transparent;
+    transition: box-shadow 0.3s, transform 0.2s ease-out, background-color 0.3s ease-in;
+
+    &:focus {
+      box-shadow: 0 0 0 3px $yellow-100;
+      transform: scale(1.05);
+    }
+
+    &:hover {
+      background-color: rgba(#000, 0.1);
+      box-shadow: 0px 0px 20px 8px rgba($yellow-100, 0.1);
+    }
+  }
+
+  &__img {
+    width: 130px;
+    height: 90px;
+    object-fit: contain;
+    object-position: center;
+
+    @include max-w($sm) {
+      width: 120px;
+      height: 70px;
+    }
+
+    @include max-w($xs) {
+      width: 100px;
+    }
+  }
+}

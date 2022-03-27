@@ -1,0 +1,53 @@
+.portfolio-residential {
+  padding: 60px 0 20px;
+
+  &__title {
+    margin-bottom: 35px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $yellow-100;
+
+    &::before {
+      content: none;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 50px;
+
+    @include max-w($md) {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__item {
+    margin: 25px 15px;
+    margin-top: 5px;
+
+    @include max-w($lg) {
+      margin: 5px 10px;
+    }
+
+    @include max-w($sm) {
+      max-width: 650px;
+      width: 100%;
+      margin: 0;
+      margin-bottom: 35px;
+      border-bottom: 1px solid $black-200;
+    }
+  }
+
+  &__info {
+    padding-top: 60px;
+  }
+
+  &__text {
+    font-size: 18px;
+
+    @include max-w($lg) {
+      font-size: 14px;
+    }
+  }
+}

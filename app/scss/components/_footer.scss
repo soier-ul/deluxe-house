@@ -1,0 +1,127 @@
+.footer {
+
+  &__top {
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include max-w($lg) {
+      padding: 30px 0;
+    }
+
+    @include max-w($xs) {
+      padding: 10px 0 30px;
+    }
+  }
+
+  &__top-info {
+    display: flex;
+
+    @include max-w($lg) {
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    @include max-w($sm) {
+      justify-content: flex-start;
+    }
+
+    @include max-w($xs) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  &__item {
+    width: 180px;
+    margin-right: 125px;
+
+    @include max-w($sm) {
+      margin-right: 60px;
+    }
+
+    @include max-w($xs) {
+      margin-bottom: 30px;
+      margin-right: 0;
+    }
+  }
+
+  &__text {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  &__links {
+    margin-bottom: 40px;
+
+    @include max-w($xs) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #fff;
+    @include area;
+
+    &::before {
+      bottom: 3px;
+      background-color: $yellow-100;
+    }
+  }
+
+  &__copy {
+    padding: 40px 0;
+    background-color: #1f1f1f;
+
+    @include max-w($lg) {
+      padding: 30px 0;
+    }
+
+    @include max-w($sm) {
+      padding: 15px 0;
+    }
+  }
+
+  &__copy-inner {
+    display: flex;
+    justify-content: space-between;
+    color: $yellow-100;
+    font-size: 14px;
+    font-weight: 300;
+
+    @include max-w($xs) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__copy-item {
+    @include max-w($sm) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__copy-link {
+    position: relative;
+    @include area;
+
+    &:hover {
+      color: #fff;
+
+      &::before {
+        background-color: #fff;
+      }
+    }
+
+    &::before {
+      width: 100%;
+      bottom: 0;
+      background-color: $yellow-100;
+    }
+  }
+}

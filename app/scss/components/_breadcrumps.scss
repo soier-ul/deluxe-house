@@ -1,0 +1,40 @@
+.breadcrumbs {
+  margin-bottom: auto;
+  margin-top: 20px;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    color: $silver;
+    margin-right: 5px;
+    padding-right: 15px;
+    margin-right: 10px;
+    position: relative;
+
+    &::after {
+      content: '/';
+      position: absolute;
+      right: 0;
+      top: 0;
+      color: $silver;
+    }
+
+    &:last-child {
+      color: $yellow-100;
+      margin-right: 0;
+      padding-right: 0;
+
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  &__link {
+    color: inherit;
+  }
+}
