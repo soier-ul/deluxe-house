@@ -118,9 +118,4 @@ $(function () {
   }
 
   ymaps.ready(init);
-
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-
 });
